@@ -1,0 +1,8 @@
+{
+    "db": {
+      "host": "localhost",
+      "user": "Faraz",
+      "password": "Faraz@0701",
+      "database": "testdbnodejs"
+    }
+  }
