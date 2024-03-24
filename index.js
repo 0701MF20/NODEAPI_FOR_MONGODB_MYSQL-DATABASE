@@ -30,9 +30,17 @@ db.connect((err) => {
 
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
+//working alright but on localhost
+// mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => console.log('MongoDB connected'))
+//     .catch(err => console.log(err));
+
+const uri = "mongodb+srv://lordr6423:yesboss123@cluster0.gkqpczf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
+    .catch(err => console.error('MongoDB connection error:', err));
+
 
 app.use((req,res,next)=>{
     req.db=db;
