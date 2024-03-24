@@ -35,7 +35,8 @@ db.connect((err) => {
 //     .then(() => console.log('MongoDB connected'))
 //     .catch(err => console.log(err));
 
-const uri = "mongodb+srv://lordr6423:yesboss123@cluster0.gkqpczf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://lordr6423:yesboss123@cluster0.gkqpczf.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0";
+
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
